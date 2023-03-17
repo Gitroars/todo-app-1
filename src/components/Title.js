@@ -8,6 +8,7 @@ import React from 'react';
 import Dashboard from "../Dashboard";
 
 import NoteAltIcon from '@mui/icons-material/NoteAlt';
+import AddTaskIcon from '@mui/icons-material/AddTask';
 function Title() {
   const [openAddModal, setOpenAddModal] = useState(false);
   const [todos,setTodos] = useState([])
@@ -26,7 +27,7 @@ function Title() {
     <div className="title">
       <header><NoteAltIcon fontSize="large"/>Todo App</header>
       <div className="title__container">
-        <button onClick={() => setOpenAddModal(true)}>New Task +</button>
+        <button onClick={() => setOpenAddModal(true)}><AddTaskIcon/> New Task</button>
         <div className="title">
           {todos.map((todo)=>(
             <TodoList
