@@ -7,6 +7,7 @@ import {
   signInWithGoogle,
 } from "./firebase";
 import "./Register.css";
+import GoogleIcon from '@mui/icons-material/Google';
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,7 +24,9 @@ function Register() {
   }, [user, loading]);
   return (
     <div className="register">
+      
       <div className="register__container">
+      <h2>Registration</h2>
         <input
           type="text"
           className="register__textBox"
@@ -52,7 +55,7 @@ function Register() {
           className="register__btn register__google"
           onClick={signInWithGoogle}
         >
-          Register with Google
+          <GoogleIcon/> Register with Google
         </button>
         <div>
           Already have an account? <Link to="/">Login</Link> now.
