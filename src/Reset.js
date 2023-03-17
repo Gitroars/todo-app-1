@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { auth, sendPasswordReset } from "./firebase";
 import "./Reset.css";
 import './styles/title.css'
+import NoteAltIcon from '@mui/icons-material/NoteAlt';
 function Reset() {
   const [email, setEmail] = useState("");
   const [user, loading, error] = useAuthState(auth);
@@ -15,8 +16,9 @@ function Reset() {
   }, [user, loading]);
   return (
     <div className="reset">
+      <div className="block">
       <div className="title">
-        <header>Todo App</header>
+        <header><NoteAltIcon fontSize="large"/>Todo App</header>
       </div>
       <div className="reset__container">
         <h2>Reset Password</h2>
@@ -37,6 +39,8 @@ function Reset() {
           Don't have an account? <Link to="/register">Register</Link> now.
         </div>
       </div>
+      </div>
+      
     </div>
   );
 }

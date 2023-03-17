@@ -7,6 +7,7 @@ import {collection,query,orderBy,onSnapshot} from "firebase/firestore";
 import React from 'react';
 import Dashboard from "../Dashboard";
 
+import NoteAltIcon from '@mui/icons-material/NoteAlt';
 function Title() {
   const [openAddModal, setOpenAddModal] = useState(false);
   const [todos,setTodos] = useState([])
@@ -23,7 +24,7 @@ function Title() {
 
   return (
     <div className="title">
-      <header>Todo App</header>
+      <header><NoteAltIcon fontSize="large"/>Todo App</header>
       <div className="title__container">
         <button onClick={() => setOpenAddModal(true)}>New Task +</button>
         <div className="title">

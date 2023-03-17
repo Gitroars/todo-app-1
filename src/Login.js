@@ -5,6 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import "./Login.css";
 import './styles/title.css'
 import GoogleIcon from '@mui/icons-material/Google';
+import NoteAltIcon from '@mui/icons-material/NoteAlt';
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -20,10 +21,12 @@ function Login() {
   return (
     
     <div className="login">
-      <div className="title">
-        <header>Todo App</header>
-      </div>
-      <div className="login__container">
+      <div className="block">
+        <div className="title">
+        <header><NoteAltIcon fontSize="large"/>Todo App</header>
+        </div>
+        <div className="login__container">
+      
       <h2>Login</h2>
         <input
           type="text"
@@ -55,6 +58,8 @@ function Login() {
           Don't have an account? <Link to="/register">Register</Link> now.
         </div>
       </div>
+      </div>
+      
     </div>
   );
 }

@@ -9,6 +9,7 @@ import {
 import "./Register.css";
 import './styles/title.css'
 import GoogleIcon from '@mui/icons-material/Google';
+import NoteAltIcon from '@mui/icons-material/NoteAlt';
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,8 +26,9 @@ function Register() {
   }, [user, loading]);
   return (
     <div className="register">
+      <div className="block">
       <div className="title">
-        <header>Todo App</header>
+      <header><NoteAltIcon fontSize="large"/>Todo App</header>
       </div>
       <div className="register__container">
       <h2>Registration</h2>
@@ -64,6 +66,8 @@ function Register() {
           Already have an account? <Link to="/">Login</Link> now.
         </div>
       </div>
+      </div>
+      
     </div>
   );
 }
