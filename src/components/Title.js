@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import {db} from "../firebase";
 import {collection,query,orderBy,onSnapshot} from "firebase/firestore";
 import React from 'react';
-
+import Dashboard from "../Dashboard";
 
 function Title() {
   const [openAddModal, setOpenAddModal] = useState(false);
@@ -42,6 +42,7 @@ function Title() {
       {openAddModal && (
         <AddTodo onClose={() => setOpenAddModal(false)} open={openAddModal} />
       )}
+      <Dashboard/>
     </div>
   );
 }
