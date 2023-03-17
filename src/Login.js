@@ -18,7 +18,9 @@ function Login() {
   }, [user, loading]);
   return (
     <div className="login">
+      
       <div className="login__container">
+      <h2>Login</h2>
         <input
           type="text"
           className="login__textBox"
