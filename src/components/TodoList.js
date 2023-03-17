@@ -3,8 +3,11 @@ import { useState } from "react";
 import Todo from "./Todo";
 import EditTodo from "./EditTodo";
 import {doc,updateDoc,deleteDoc} from "firebase/firestore"
-
 import {db} from "../firebase"
+
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 function TodoList({ id, title, description, completed }) {
   const [checked, setChecked] = useState(completed);
   const [open, setOpen] = useState({ edit: false, view: false });
@@ -57,11 +60,11 @@ function TodoList({ id, title, description, completed }) {
               className="todoList__editButton"
               onClick={() => setOpen({ ...open, edit: true })}
             >
-              Edit
+              <EditIcon/>
             </button>
-            <button className="todoList__deleteButton" onClick={handleDelete}>Delete</button>
+            <button className="todoList__deleteButton" onClick={handleDelete}><DeleteIcon/></button>
           </div>
-          <button onClick={() => setOpen({ ...open, view: true })}>View</button>
+          <button onClick={() => setOpen({ ...open, view: true })}><VisibilityIcon/></button>
         </div>
       </div>
 

@@ -10,7 +10,7 @@ function EditTodo({ open, onClose, toEditTitle, toEditDescription, id }) {
 
   const handleUpdate = async (e) => {
     e.preventDefault()
-    const todoDocRef = doc(db,"todos",id)
+    const todoDocRef = doc(db,"tos",id)
     try{
       await updateDoc(todoDocRef,{
         title:title,
