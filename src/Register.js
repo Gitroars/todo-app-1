@@ -7,6 +7,7 @@ import {
   signInWithGoogle,
 } from "./firebase";
 import "./Register.css";
+import './styles/title.css'
 import GoogleIcon from '@mui/icons-material/Google';
 function Register() {
   const [email, setEmail] = useState("");
@@ -24,7 +25,9 @@ function Register() {
   }, [user, loading]);
   return (
     <div className="register">
-      
+      <div className="title">
+        <header>Todo App</header>
+      </div>
       <div className="register__container">
       <h2>Registration</h2>
         <input

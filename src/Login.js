@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import {auth,signInWithGoogle,logInWithEmailAndPassword,} from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import "./Login.css";
+import './styles/title.css'
 import GoogleIcon from '@mui/icons-material/Google';
 function Login() {
   const [email, setEmail] = useState("");
@@ -17,8 +18,11 @@ function Login() {
     if (user) navigate("/dashboard");
   }, [user, loading]);
   return (
+    
     <div className="login">
-      
+      <div className="title">
+        <header>Todo App</header>
+      </div>
       <div className="login__container">
       <h2>Login</h2>
         <input

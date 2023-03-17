@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { auth, sendPasswordReset } from "./firebase";
 import "./Reset.css";
+import './styles/title.css'
 function Reset() {
   const [email, setEmail] = useState("");
   const [user, loading, error] = useAuthState(auth);
@@ -14,6 +15,9 @@ function Reset() {
   }, [user, loading]);
   return (
     <div className="reset">
+      <div className="title">
+        <header>Todo App</header>
+      </div>
       <div className="reset__container">
         <h2>Reset Password</h2>
         <input
